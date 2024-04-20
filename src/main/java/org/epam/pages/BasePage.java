@@ -1,5 +1,5 @@
 
-package org.epam;
+package org.epam.pages;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
@@ -18,7 +18,8 @@ public class BasePage {
     }
 
     protected WebElement element ( By by , Integer seconds ) {
-        WebDriverWait wait = new WebDriverWait ( driver , Duration.ofSeconds ( seconds ) );
-        return wait.until ( ExpectedConditions.presenceOfElementLocated ( by ) );
+        return new WebDriverWait ( driver , Duration.ofSeconds ( seconds ) )
+                     .until (
+                        ExpectedConditions.presenceOfElementLocated ( by ) );
     }
 }
