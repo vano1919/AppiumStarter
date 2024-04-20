@@ -3,6 +3,7 @@ AppiumStarter Framework
 
 Overview:
 AppiumStarter is a framework for kickstarting mobile automation projects using Appium. It employs the Page Object Model (POM) pattern and custom methods with dynamic waits to ensure stability in your tests.
+**I Will Develop My own Tests On another Branches**
 
 Key Features:
 
