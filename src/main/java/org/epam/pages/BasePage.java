@@ -10,16 +10,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class BasePage {
-
     protected static AndroidDriver driver;
 
     protected BasePage ( AndroidDriver driver ) {
         BasePage.driver = driver;
     }
 
-    protected WebElement element ( By by , Integer seconds ) {
+    protected WebElement elementByPresence ( By by , Integer seconds ) {
         return new WebDriverWait ( driver , Duration.ofSeconds ( seconds ) )
                      .until (
                         ExpectedConditions.presenceOfElementLocated ( by ) );
+    }
+
+    protected WebElement elementByClickable ( By by , Integer seconds ) {
+        return new WebDriverWait ( driver , Duration.ofSeconds ( seconds ) )
+                .until (
+                        ExpectedConditions.elementToBeClickable ( by ) );
     }
 }

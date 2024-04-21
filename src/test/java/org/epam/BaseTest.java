@@ -11,8 +11,6 @@ import java.net.URL;
 
 public class BaseTest {
 
-
-
     protected static final String APPIUM = "http://localhost:4723/wd/hub";
 
     protected static AndroidDriver driver;

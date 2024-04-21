@@ -1,6 +1,4 @@
 package org.epam;
-
-
 import org.epam.pages.LoginPage;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
@@ -21,6 +19,7 @@ public class TestApp extends BaseTest {
     public void test_2_LoginCorrectCredentials(){
         String username = "alice";
         String password = "mypassword";
+
         String actualDisplayedName = loginPage.loginToApp ( username,password );
         Assert.assertEquals("You are logged in as alice", actualDisplayedName);
     }
